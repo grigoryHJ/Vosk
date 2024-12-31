@@ -1,13 +1,17 @@
 from vosk import Model, KaldiRecognizer
 import pyaudio
 import wave
+"""
+    Обязательно установить в проект модель Vosk
+    Ее можно скачать по ссылке - https://github.com/alphacep/vosk-space/blob/master/models.md
+"""
 
 # Укажите путь к вашей модели
 CHUNK = 1024 # определяет форму ауди сигнала
 FRT = pyaudio.paInt16 # шестнадцатибитный формат задает значение амплитуды
 CHAN = 1 # канал записи звука
 RT = 44100 # частота
-REC_SEC = 5 #длина записи
+REC_SEC = 10 #длина записи
 OUTPUT = "files/output.wav"
 
 p = pyaudio.PyAudio()
